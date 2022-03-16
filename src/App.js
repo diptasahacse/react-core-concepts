@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 
 
@@ -39,21 +40,45 @@ function App() {
   // personData.map(person => console.log(person.name))
   return (
     <div className='main-container-style'>
-      {
+      {/* {
         personData.map(({name,ocupation,salary}) => <Person name={name}  ocupation={ocupation} salary={salary}></Person>)
-      }
+      } */}
+      <Counter></Counter>
+      <Counter></Counter>
+
+
     </div>
   );
 }
 
-function Person({name,ocupation,salary}){
-  return (
-    <div className='container'>
-      <h3>{name}</h3>
-      <p>Post: {ocupation}</p>
-      <p>Salary: {salary}</p>
+// function Person({name,ocupation,salary}){
+//   return (
+//     <div className='container'>
+//       <h3>{name}</h3>
+//       <p>Post: {ocupation}</p>
+//       <p>Salary: {salary}</p>
+//     </div>
+//   );
+// }
+
+function Counter(){
+  const myState = useState(0);
+  // console.log(myState)
+
+  
+  const [count, setState] = myState;
+
+  const increaseStateValue = ()=>setState(count+1);
+  const decreaseStateValue = ()=>setState(count-1);
+  
+  return(
+    <div className='counter-component'>
+      <h2>Count: {count}</h2>
+      <button onClick={increaseStateValue}>Increase</button>
+      <button onClick={decreaseStateValue}>Decrease</button>
     </div>
   );
+
 }
 
 
