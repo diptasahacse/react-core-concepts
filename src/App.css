@@ -36,10 +36,10 @@
     transform: rotate(360deg);
   }
 }
-.main-container-style{
+/* .main-container-style{
   display: grid;
   grid-template-columns: repeat(3,1fr);
-}
+} */
 .container{
   border: 2px solid goldenrod;
   border-radius: 10px;
@@ -52,4 +52,17 @@
   padding: 20px;
   text-align: center;
   border-radius: 20px;
+}
+.allusers{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+
+}
+.user{
+  border: 2px solid goldenrod;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+
 }
